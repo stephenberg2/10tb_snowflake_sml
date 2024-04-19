@@ -119,34 +119,6 @@ level_attributes:
       - Range
       - Siblings
 
-calculation_groups:
-
-  - unique_name: Time Calculation Group Example
-    label: Time Calculation Group Example
-    folder: Calculation Groups
-
-    calculated_members:
-
-      - unique_name: Last Year
-        expression: "(ParallelPeriod([Date Dimension].[Date Dimension].[Calendar Year],\
-          \ 1, [Date Dimension].[Date Dimension].CurrentMember), [Measures].currentMember)"
-        format: General number
-        hierarchy: Date Dimension
-        template: Last Year
-
-      - unique_name: Year to Date
-        expression: "Aggregate(PeriodsToDate([Date Dimension].[Date Dimension].[Calendar\
-          \ Year], [Date Dimension].[Date Dimension].CurrentMember),[Measures].currentMember)"
-        format: Standard
-        hierarchy: Date Dimension
-        template: Year to Date
-
-      - unique_name: Current Year
-        expression: "([Date Dimension].[Date Dimension].CurrentMember, [Measures].currentMember)"
-        format: Standard
-        hierarchy: Date Dimension
-        template: Current
-        is_default: true
 
 modeler_metadata:
   version: 0

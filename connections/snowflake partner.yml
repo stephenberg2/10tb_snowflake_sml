@@ -1,6 +1,6 @@
 unique_name: snowflake partner
 label: snowflake partner
 object_type: connection
-as_connection: snowflake partner
+as_connection: snowflake
 database: SNOWFLAKE_SAMPLE_DATA
 schema: TPCDS_SF10TCL
