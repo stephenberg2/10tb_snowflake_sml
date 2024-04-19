@@ -1,0 +1,6 @@
+unique_name: Store Sales Price
+object_type: metric
+label: Store Sales Price
+calculation_method: sum
+dataset: store_sales
+column: SS_SALES_PRICE

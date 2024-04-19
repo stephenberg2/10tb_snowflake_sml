@@ -1,0 +1,7 @@
+unique_name: Web Customer Count
+object_type: metric
+label: Web Customer Count
+description: count of WS_BILL_CUSTOMER_SK
+calculation_method: count non-null
+dataset: web_sales
+column: WS_BILL_CUSTOMER_SK

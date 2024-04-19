@@ -1,0 +1,6 @@
+unique_name: Total Quantity Sold YTD
+object_type: metric_calc
+label: Total Quantity Sold YTD
+expression: "SUM(PeriodsToDate([Sold Date Dimension].[Sold Date Dimension].[Sold Calendar\
+  \ Year], [Sold Date Dimension].[Sold Date Dimension].CurrentMember),[Measures].[Total\
+  \ Quantity Sold])"

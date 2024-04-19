@@ -1,0 +1,4 @@
+unique_name: Customer Count
+object_type: metric_calc
+label: Total Customer Count
+expression: "[Measures].[Store Customer Count] + [Measures].[Web Customer Count]"

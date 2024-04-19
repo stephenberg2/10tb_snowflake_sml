@@ -1,0 +1,6 @@
+unique_name: Store Sales Row Counter
+object_type: metric
+label: Store Sales Row Counter
+calculation_method: sum
+dataset: store_sales
+column: SS ROW COUNTER

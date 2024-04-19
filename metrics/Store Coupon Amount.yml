@@ -1,0 +1,6 @@
+unique_name: Store Coupon Amount
+object_type: metric
+label: Store Coupon Amount
+calculation_method: sum
+dataset: store_sales
+column: SS_COUPON_AMT

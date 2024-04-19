@@ -1,0 +1,7 @@
+unique_name: Purchased Amount In Store
+object_type: metric
+label: Purchased Amount In Store
+description: sum of purchased_amount_in_store
+calculation_method: sum
+dataset: store_sales
+column: Purchased Amount in Store

@@ -1,0 +1,5 @@
+unique_name: 10TB - Snowflake
+label: 10TB - Snowflake
+as_version: 1.0
+aggressive_agg_promotion: false
+build_speculative_aggs: false

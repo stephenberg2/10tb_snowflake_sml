@@ -1,0 +1,160 @@
+unique_name: Store Dimension
+object_type: dimension
+label: Store Dimension
+type: standard
+
+hierarchies:
+
+  - unique_name: Store Dimension
+    label: Store Dimension
+    folder: Store Attributes
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: d_store_country
+
+        secondary_attributes:
+
+          - unique_name: d_S_COUNTRY
+            label: Store Country
+            folder: Store Attributes
+            dataset: store
+            name_column: S_COUNTRY
+            key_columns:
+              - S_COUNTRY
+            sort_column: S_COUNTRY
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: d_store_state
+
+        secondary_attributes:
+
+          - unique_name: d_S_STATE
+            label: Store State
+            folder: Store Attributes
+            dataset: store
+            name_column: S_STATE
+            key_columns:
+              - S_STATE
+            sort_column: S_STATE
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: d_store_county
+
+        secondary_attributes:
+
+          - unique_name: d_S_COUNTY
+            label: Store County
+            folder: Store Attributes
+            dataset: store
+            name_column: S_COUNTY
+            key_columns:
+              - S_COUNTY
+            sort_column: S_COUNTY
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: d_store_city
+
+        secondary_attributes:
+
+          - unique_name: Store City
+            label: Store City
+            folder: Store Attributes
+            dataset: store
+            name_column: S_CITY
+            key_columns:
+              - S_CITY
+            sort_column: S_CITY
+            allowed_calcs_for_dma:
+              - Lag
+              - Range
+              - Siblings
+
+      - unique_name: Store Dimension
+
+        secondary_attributes:
+
+          - unique_name: d_s_floor_space
+            label: Store Floor Space
+            folder: Store Attributes
+            dataset: store
+            name_column: S_FLOOR_SPACE
+            key_columns:
+              - S_FLOOR_SPACE
+            sort_column: S_FLOOR_SPACE
+
+          - unique_name: d_s_number_employees
+            label: Store Number of Employees
+            folder: Store Attributes
+            dataset: store
+            name_column: S_NUMBER_EMPLOYEES
+            key_columns:
+              - S_NUMBER_EMPLOYEES
+            sort_column: S_NUMBER_EMPLOYEES
+
+          - unique_name: d_store_name
+            label: Store Name
+            folder: Store Attributes
+            dataset: store
+            name_column: S_STORE_NAME
+            key_columns:
+              - S_STORE_NAME
+            sort_column: S_STORE_NAME
+
+level_attributes:
+
+  - unique_name: d_store_city
+    label: Store City
+    dataset: store
+    name_column: S_CITY
+    key_columns:
+      - S_COUNTRY
+      - S_STATE
+      - S_CITY
+      - S_COUNTY
+
+  - unique_name: d_store_country
+    label: Store Country
+    dataset: store
+    name_column: S_COUNTRY
+    key_columns:
+      - S_COUNTRY
+
+  - unique_name: d_store_county
+    label: Store County
+    dataset: store
+    name_column: S_COUNTY
+    key_columns:
+      - S_STATE
+      - S_COUNTY
+      - S_COUNTRY
+
+  - unique_name: d_store_state
+    label: Store State
+    dataset: store
+    name_column: S_STATE
+    key_columns:
+      - S_COUNTRY
+      - S_STATE
+
+  - unique_name: Store Dimension
+    label: Store Number
+    is_unique_key: true
+    dataset: store
+    name_column: S_STORE_SK
+    key_columns:
+      - S_STORE_SK
+
+modeler_metadata:
+  version: 0
+  modified: "false"

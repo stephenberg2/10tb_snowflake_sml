@@ -1,0 +1,70 @@
+unique_name: Customer Dimension QDS
+object_type: dataset
+label: Customer Dimension QDS
+connection_id: snowflake partner
+sql: "select \n* \nfrom SE_DEMO_LIBRARY.TPCDS_10TB.customer_address ca, \nSE_DEMO_LIBRARY.TPCDS_10TB.customer\
+  \ c\nwhere ca.ca_address_id = c.c_customer_id"
+
+columns:
+  - name: CA_ADDRESS_ID
+    data_type: string
+  - name: CA_ADDRESS_SK
+    data_type: "decimal(38,0)"
+  - name: CA_CITY
+    data_type: string
+  - name: CA_COUNTRY
+    data_type: string
+  - name: CA_COUNTY
+    data_type: string
+  - name: CA_GMT_OFFSET
+    data_type: "decimal(5,2)"
+  - name: CA_LOCATION_TYPE
+    data_type: string
+  - name: CA_STATE
+    data_type: string
+  - name: CA_STREET_NAME
+    data_type: string
+  - name: CA_STREET_NUMBER
+    data_type: string
+  - name: CA_STREET_TYPE
+    data_type: string
+  - name: CA_SUITE_NUMBER
+    data_type: string
+  - name: CA_ZIP
+    data_type: string
+  - name: C_BIRTH_COUNTRY
+    data_type: string
+  - name: C_BIRTH_DAY
+    data_type: "decimal(38,0)"
+  - name: C_BIRTH_MONTH
+    data_type: "decimal(38,0)"
+  - name: C_BIRTH_YEAR
+    data_type: "decimal(38,0)"
+  - name: C_CURRENT_ADDR_SK
+    data_type: "decimal(38,0)"
+  - name: C_CURRENT_CDEMO_SK
+    data_type: "decimal(38,0)"
+  - name: C_CURRENT_HDEMO_SK
+    data_type: "decimal(38,0)"
+  - name: C_CUSTOMER_ID
+    data_type: string
+  - name: C_CUSTOMER_SK
+    data_type: "decimal(38,0)"
+  - name: C_EMAIL_ADDRESS
+    data_type: string
+  - name: C_FIRST_NAME
+    data_type: string
+  - name: C_FIRST_SALES_DATE_SK
+    data_type: "decimal(38,0)"
+  - name: C_FIRST_SHIPTO_DATE_SK
+    data_type: "decimal(38,0)"
+  - name: C_LAST_NAME
+    data_type: string
+  - name: C_LAST_REVIEW_DATE
+    data_type: string
+  - name: C_LOGIN
+    data_type: string
+  - name: C_PREFERRED_CUST_FLAG
+    data_type: string
+  - name: C_SALUTATION
+    data_type: string

@@ -1,0 +1,7 @@
+unique_name: Purchased Amount On Web
+object_type: metric
+label: Purchased Amount On Web
+description: sum of purchased_amount_on_web
+calculation_method: sum
+dataset: web_sales
+column: Purchased Amount on Web

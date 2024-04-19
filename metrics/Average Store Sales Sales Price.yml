@@ -1,0 +1,7 @@
+unique_name: Average Store Sales Sales Price
+object_type: metric
+label: Average Store Sales Sales Price
+description: avg of ss_sales_price
+calculation_method: average
+dataset: store_sales
+column: SS_SALES_PRICE
