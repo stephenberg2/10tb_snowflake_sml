@@ -49,7 +49,7 @@ hierarchies:
               - Range
               - Siblings
 
-      - unique_name: Time Dimension
+      - unique_name: Date
         time_unit: day
 
 level_attributes:
@@ -57,10 +57,12 @@ level_attributes:
   - unique_name: Calendar Month
     label: Calendar Month
     dataset: date_dim
-    name_column: YEAR_MONTH
+    sort_column: D_MOY
+    name_column: D_MOY
     key_columns:
       - D_QUARTER_NAME
-      - YEAR_MONTH
+      - D_MOY
+      - D_YEAR
     allowed_calcs_for_dma:
       - Ancestor
       - Descendants
@@ -73,9 +75,9 @@ level_attributes:
   - unique_name: Calendar Quarter
     label: Calendar Quarter
     dataset: date_dim
-    name_column: D_QUARTER_NAME
+    name_column: D_QOY
     key_columns:
-      - D_QUARTER_NAME
+      - D_QOY
     sort_column: D_QOY
     allowed_calcs_for_dma:
       - Ancestor
@@ -103,7 +105,7 @@ level_attributes:
       - Range
       - Siblings
 
-  - unique_name: Time Dimension
+  - unique_name: Date
     label: Date
     is_unique_key: true
     dataset: date_dim

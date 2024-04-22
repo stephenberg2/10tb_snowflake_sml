@@ -1,83 +1,70 @@
 unique_name: Product Dimension
 object_type: dimension
 label: Product Dimension
-type: standard
-
 hierarchies:
-
   - unique_name: Product Dimension
     label: Product Dimension
     description: prod dimension desc
+    filter_empty: 'yes'
     folder: Product Attributes
-    filter_empty: "yes"
-
     levels:
-
-      - unique_name: I Category
-
+      - unique_name: Product Category
       - unique_name: Product Class
-
       - unique_name: Product Brand
-
       - unique_name: Product Dimension
-
         secondary_attributes:
-
           - unique_name: d_i_color
             label: Product Color
             description: prod color description
-            folder: Product Attributes
             dataset: item
-            name_column: I_COLOR
+            folder: Product Attributes
             key_columns:
               - I_COLOR
+            name_column: I_COLOR
             sort_column: I_COLOR
-
           - unique_name: d_i_size
             label: Product Size
-            folder: Product Attributes
             dataset: item
-            name_column: I_SIZE
+            folder: Product Attributes
             key_columns:
               - I_SIZE
+            name_column: I_SIZE
             sort_column: I_SIZE
-
 level_attributes:
-
-  - unique_name: I Category
+  - unique_name: Product Category
     label: Product Category
     description: product cat description
     dataset: item
-    name_column: I_CATEGORY
     key_columns:
       - I_CATEGORY
-
+    name_column: I_CATEGORY
+    sort_column: empty_value
   - unique_name: Product Brand
     label: Product Brand
     dataset: item
-    name_column: I_BRAND
     key_columns:
       - I_BRAND
       - I_CATEGORY
       - I_CLASS
-
+    name_column: I_BRAND
+    sort_column: empty_value
   - unique_name: Product Class
     label: Product Class
     description: description test with same query name
     dataset: item
-    name_column: I_CLASS
     key_columns:
       - I_CLASS
       - I_CATEGORY
-
+    name_column: I_CLASS
+    sort_column: empty_value
   - unique_name: Product Dimension
     label: Product Item
-    is_unique_key: true
     dataset: item
-    name_column: I_ITEM_DESC
+    is_unique_key: true
     key_columns:
       - I_ITEM_SK
-
+    name_column: I_ITEM_DESC
 modeler_metadata:
+  modified: 'false'
   version: 0
-  modified: "false"
+type: standard

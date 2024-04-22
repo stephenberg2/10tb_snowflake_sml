@@ -48,7 +48,7 @@ relationships:
         - WS_SOLD_DATE_SK
     to:
       dimension: Date Dimension
-      level: Time Dimension
+      level: Date
     role_play: "Sold {0}"
 
   - unique_name: web_sales_Date_Dimension_Ship
@@ -58,7 +58,7 @@ relationships:
         - WS_SHIP_DATE_SK
     to:
       dimension: Date Dimension
-      level: Time Dimension
+      level: Date
     role_play: "Ship {0}"
 
   - unique_name: web_sales_Product_Dimension
@@ -122,7 +122,7 @@ relationships:
         - SS_SOLD_DATE_SK
     to:
       dimension: Date Dimension
-      level: Time Dimension
+      level: Date
     role_play: "Sold {0}"
 
   - unique_name: store_sales_Product_Dimension
