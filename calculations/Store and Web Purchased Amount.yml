@@ -1,5 +1,5 @@
 unique_name: Store and Web Purchased Amount
 object_type: metric_calc
 label: Store and Web Purchased Amount
-expression: "[Measures].[Purchased Amount In Store] + [Measures].[Purchased Amount\
-  \ On Web]"
+expression: '[Measures].[Purchased Amount In Store] + [Measures].[Purchased Amount On Web]'
+is_hidden: false

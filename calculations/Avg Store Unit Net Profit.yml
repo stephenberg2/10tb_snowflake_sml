@@ -1,4 +1,5 @@
 unique_name: Avg Store Unit Net Profit
 object_type: metric_calc
 label: Avg Store Unit Net Profit
-expression: "[Measures].[Store Net Profit] / [Measures].[Store Quantity Sold]"
+expression: '[Measures].[Store Net Profit] / [Measures].[Store Quantity Sold]'
+is_hidden: false

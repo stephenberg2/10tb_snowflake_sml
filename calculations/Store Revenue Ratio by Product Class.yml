@@ -1,5 +1,8 @@
 unique_name: Store Revenue Ratio by Product Class
 object_type: metric_calc
 label: Store Revenue Ratio by Product Class
-expression: "[Measures].[Store Sales Price] / ([Product Dimension].[Product Dimension].[All],\
-  \ [Measures].[Store Sales Price])"
+expression: >-
+  [Measures].[Store Sales Price] 
+  / 
+  ([Product Dimension].[Product Dimension].[All], [Measures].[Store Sales Price])
+is_hidden: false
