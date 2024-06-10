@@ -1,127 +1,110 @@
 unique_name: Date Dimension
 object_type: dimension
 label: Date Dimension
-type: time
-
 hierarchies:
-
   - unique_name: Date Dimension
     label: Date Month Hierarchy
+    filter_empty: 'yes'
     folder: Date Attributes
-    filter_empty: "yes"
-
     levels:
-
       - unique_name: Calendar Year
-        time_unit: year
-
       - unique_name: Calendar Quarter
-        time_unit: quarter
-
       - unique_name: Calendar Month
-        time_unit: month
-
         secondary_attributes:
-
           - unique_name: d_month_of_year
             label: Month of Year
-            folder: Date Attributes
+            allowed_calcs_for_dma:
+              - Lag
+              - Siblings
+              - Range
             dataset: date_dim
-            name_column: D_MOY
+            folder: Date Attributes
             key_columns:
               - D_MOY
+            name_column: D_MOY
             sort_column: D_MOY
-            allowed_calcs_for_dma:
-              - Lag
-              - Range
-              - Siblings
-
           - unique_name: d_month_sequence
             label: Month Sequence
-            folder: Date Attributes
-            dataset: date_dim
-            name_column: D_MONTH_SEQ
-            key_columns:
-              - D_MONTH_SEQ
-            sort_column: D_MONTH_SEQ
             allowed_calcs_for_dma:
               - Lag
-              - Range
               - Siblings
-
+              - Range
+            dataset: date_dim
+            folder: Date Attributes
+            key_columns:
+              - D_MONTH_SEQ
+            name_column: D_MONTH_SEQ
+            sort_column: D_MONTH_SEQ
       - unique_name: Date
-        time_unit: day
-
 level_attributes:
-
   - unique_name: Calendar Month
     label: Calendar Month
+    allowed_calcs_for_dma:
+      - Lag
+      - ParallelPeriod
+      - Ancestor
+      - Descendants
+      - Siblings
+      - PeriodsToDate
+      - Range
     dataset: date_dim
-    sort_column: D_MOY
-    name_column: D_MOY
     key_columns:
       - D_QUARTER_NAME
       - D_MOY
       - D_YEAR
-    allowed_calcs_for_dma:
-      - Ancestor
-      - Descendants
-      - Lag
-      - ParallelPeriod
-      - PeriodsToDate
-      - Range
-      - Siblings
-
+    name_column: D_MOY
+    sort_column: D_MOY
+    time_unit: month
   - unique_name: Calendar Quarter
     label: Calendar Quarter
-    dataset: date_dim
-    name_column: D_QOY
-    key_columns:
-      - D_QOY
-    sort_column: D_QOY
     allowed_calcs_for_dma:
-      - Ancestor
-      - Descendants
       - Lag
       - ParallelPeriod
+      - Ancestor
+      - Descendants
+      - Siblings
       - PeriodsToDate
       - Range
-      - Siblings
-
+    dataset: date_dim
+    key_columns:
+      - D_QOY
+    name_column: D_QOY
+    sort_column: D_QOY
+    time_unit: quarter
   - unique_name: Calendar Year
     label: Calendar Year
     description: calendar year description test
+    allowed_calcs_for_dma:
+      - Lag
+      - ParallelPeriod
+      - Ancestor
+      - Descendants
+      - Siblings
+      - PeriodsToDate
+      - Range
     dataset: date_dim
-    name_column: D_YEAR
     key_columns:
       - D_YEAR
+    name_column: D_YEAR
     sort_column: D_YEAR
-    allowed_calcs_for_dma:
-      - Ancestor
-      - Descendants
-      - Lag
-      - ParallelPeriod
-      - PeriodsToDate
-      - Range
-      - Siblings
-
+    time_unit: year
   - unique_name: Date
     label: Date
-    is_unique_key: true
-    dataset: date_dim
-    name_column: D_DATE
-    key_columns:
-      - D_DATE_SK
     allowed_calcs_for_dma:
-      - Ancestor
-      - Descendants
       - Lag
       - ParallelPeriod
+      - Ancestor
+      - Descendants
+      - Siblings
       - PeriodsToDate
       - Range
-      - Siblings
-
-
+    dataset: date_dim
+    is_unique_key: true
+    key_columns:
+      - D_DATE_SK
+    name_column: D_DATE
+    time_unit: day
 modeler_metadata:
+  modified: 'false'
   version: 0
-  modified: "false"
+type: time
