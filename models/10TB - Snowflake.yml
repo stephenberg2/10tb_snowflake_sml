@@ -235,12 +235,4 @@ relationships:
     to:
       dimension: Product Dimension
       level: Product Item
-  - unique_name: store_sales_customer_dimension_qds_dim
-    from:
-      dataset: store_sales
-      join_columns:
-        - SS_CUSTOMER_SK
-    to:
-      dimension: customer dimension qds dim
-      level: customer id
   
