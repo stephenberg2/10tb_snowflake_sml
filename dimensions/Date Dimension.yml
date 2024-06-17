@@ -49,8 +49,8 @@ level_attributes:
       - Range
     dataset: date_dim
     key_columns:
-      - D_QUARTER_NAME
       - D_MOY
+      - D_QOY
       - D_YEAR
     name_column: D_MOY
     sort_column: D_MOY
