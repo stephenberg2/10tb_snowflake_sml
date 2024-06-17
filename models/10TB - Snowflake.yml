@@ -243,3 +243,19 @@ relationships:
     to:
       dimension: customer dimension qds dim
       level: customer id
+  - unique_name: web_sales_WS_ITEM_SK_to_Product Dimension_Product Item
+    from:
+      dataset: web_sales
+      join_columns:
+        - WS_ITEM_SK
+    to:
+      dimension: Product Dimension
+      level: Product Item
+  - unique_name: store_sales_SS_ITEM_SK_to_Product Dimension_Product Item
+    from:
+      dataset: store_sales
+      join_columns:
+        - SS_ITEM_SK
+    to:
+      dimension: Product Dimension
+      level: Product Item

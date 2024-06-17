@@ -99,10 +99,11 @@ level_attributes:
       - PeriodsToDate
       - Range
     dataset: date_dim
+    is_hidden: true
     is_unique_key: true
     key_columns:
       - D_DATE_SK
-    name_column: D_DATE
+    name_column: D_DATE_SK
     time_unit: day
 modeler_metadata:
   modified: 'false'
